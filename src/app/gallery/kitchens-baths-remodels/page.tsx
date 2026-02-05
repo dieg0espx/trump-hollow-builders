@@ -19,20 +19,17 @@ const galleryImages: GalleryImage[] = [
   { src: '/images/gallery1/kitchen-08.jpg', alt: 'Gourmet kitchen with custom cherry cabinetry', category: 'Kitchens' },
 
   // Kitchens - New (kitchen series)
-  { src: '/dropbox/kitchen1.jpg', alt: 'Cherry wood kitchen with granite island and custom crown molding', category: 'Kitchens' },
-  { src: '/dropbox/kitchen2.jpg', alt: 'Traditional cherry kitchen with granite countertops', category: 'Kitchens' },
-  { src: '/dropbox/kitchen3.jpg', alt: 'Elegant cherry cabinet kitchen with pendant lighting', category: 'Kitchens' },
-  { src: '/dropbox/kitchen4.jpg', alt: 'Custom cherry kitchen with professional appliances', category: 'Kitchens' },
+  { src: '/dropbox/kitchen1.jpg', alt: 'Cherry kitchen with granite island and tiered pendant lighting', category: 'Kitchens' },
+  { src: '/dropbox/kitchen2.jpg', alt: 'Cherry kitchen with arched window valance and granite counters', category: 'Kitchens' },
+  { src: '/dropbox/kitchen3.jpg', alt: 'Cherry kitchen with built-in wine bar and beverage cooler', category: 'Kitchens' },
+  { src: '/dropbox/kitchen4.jpg', alt: 'Open concept cherry kitchen with bay window dining nook', category: 'Kitchens' },
 
-  // Kitchens - New (Large Flat series)
-  { src: '/dropbox/Large Flat001.jpg', alt: 'Cherry cabinet gourmet kitchen with custom cabinetry', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat002.jpg', alt: 'Luxury cherry kitchen with granite island', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat003.jpg', alt: 'Traditional cherry kitchen renovation', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat004.jpg', alt: 'Custom cherry kitchen with professional range', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat005.jpg', alt: 'Elegant cherry wood kitchen design', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat006.jpg', alt: 'Cherry cabinet kitchen with custom details', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat007.jpg', alt: 'Gourmet cherry kitchen with island seating', category: 'Kitchens' },
-  { src: '/dropbox/Large Flat008.jpg', alt: 'Premium cherry kitchen with granite counters', category: 'Kitchens' },
+  // Kitchens - New (Large Flat series) - only keeping actual kitchen
+  { src: '/dropbox/Large Flat001.jpg', alt: 'Gourmet cherry kitchen with granite island and stainless appliances', category: 'Kitchens' },
+
+  // Bathrooms - From Large Flat series
+  { src: '/dropbox/Large Flat006.jpg', alt: 'Master bathroom with cherry vanity and soaking tub', category: 'Bathrooms' },
+  { src: '/dropbox/Large Flat007.jpg', alt: 'Cherry double vanity bathroom with custom mirrors', category: 'Bathrooms' },
 
   // Kitchens - New (20201001 series - White Kitchen Remodel)
   { src: '/dropbox/20201001_154836.jpg', alt: 'Modern white shaker kitchen with hardwood floors', category: 'Kitchens' },
@@ -40,6 +37,10 @@ const galleryImages: GalleryImage[] = [
   { src: '/dropbox/20201001_155001.jpg', alt: 'Contemporary white kitchen with stainless appliances', category: 'Kitchens' },
   { src: '/dropbox/20201001_155007.jpg', alt: 'White cabinet kitchen with accent wall', category: 'Kitchens' },
   { src: '/dropbox/20201001_155034.jpg', alt: 'Modern white kitchen renovation complete', category: 'Kitchens' },
+
+  // Kitchens - White shaker kitchen
+  { src: '/dropbox/kelsey20220124.jpg', alt: 'White shaker kitchen with floor-to-ceiling pantry cabinets', category: 'Kitchens' },
+  { src: '/dropbox/kelsey20220125.jpg', alt: 'White shaker kitchen with black hardware and granite counters', category: 'Kitchens' },
 
   // Bathrooms - Original
   { src: '/images/gallery1/bathroom-01.jpg', alt: 'Spa-like master bathroom with walk-in shower', category: 'Bathrooms' },
@@ -51,9 +52,9 @@ const galleryImages: GalleryImage[] = [
   { src: '/images/gallery1/bathroom-07.jpg', alt: 'Master bath with oak vanity and freestanding tub', category: 'Bathrooms' },
 
   // Bathrooms - New (bath series)
-  { src: '/dropbox/bath1.jpg', alt: 'Elegant master bath with custom vanity and glass shower', category: 'Bathrooms' },
-  { src: '/dropbox/bath2.jpg', alt: 'Luxury bathroom with travertine tile and frameless shower', category: 'Bathrooms' },
-  { src: '/dropbox/bath3.jpg', alt: 'Spa-inspired bathroom with custom cabinetry', category: 'Bathrooms' },
+  { src: '/dropbox/bath1.jpg', alt: 'Master bath with cream vanity and frameless glass shower', category: 'Bathrooms' },
+  { src: '/dropbox/bath2.jpg', alt: 'Master bath with soaking tub and custom cream cabinetry', category: 'Bathrooms' },
+  { src: '/dropbox/kelsey20220132.jpg', alt: 'Bathroom detail with matte black faucet and granite counter', category: 'Bathrooms' },
 
   // Bathrooms - New (IMG series)
   { src: '/dropbox/IMG_0101.JPG', alt: 'Before and after bathroom transformation', category: 'Bathrooms' },
@@ -65,8 +66,8 @@ const galleryImages: GalleryImage[] = [
   { src: '/images/gallery1/remodel-03.jpg', alt: 'Home addition and renovation', category: 'Full Remodels' },
 
   // Full Remodels - New (family room series)
-  { src: '/dropbox/family room1.jpg', alt: 'Family room with custom built-in entertainment center', category: 'Full Remodels' },
-  { src: '/dropbox/family room2.jpg', alt: 'Living room remodel with fireplace surround and built-ins', category: 'Full Remodels' },
+  { src: '/dropbox/family room1.jpg', alt: 'Living room with white built-in shelves and fireplace surround', category: 'Full Remodels' },
+  { src: '/dropbox/family room2.jpg', alt: 'Family room remodel with custom fireplace built-ins and large windows', category: 'Full Remodels' },
 
   // Full Remodels - New (IMG exterior)
   { src: '/dropbox/IMG_0066.JPG', alt: 'Before and after exterior home renovation', category: 'Full Remodels' },

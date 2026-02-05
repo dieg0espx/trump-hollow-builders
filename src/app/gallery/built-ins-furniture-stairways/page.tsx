@@ -8,19 +8,22 @@ import { motion } from 'framer-motion';
 
 // Gallery images - these would ideally come from a CMS or API
 const galleryImages: GalleryImage[] = [
-  // Built-ins - Original
-  { src: '/images/gallery2/builtin-01.jpg', alt: 'Custom window seat with storage drawers', category: 'Built-ins' },
-  { src: '/images/gallery2/builtin-02.jpg', alt: 'Built-in bench with sliding barn door', category: 'Built-ins' },
-  { src: '/images/gallery2/furniture-02.jpg', alt: 'Custom white china cabinet with glass doors', category: 'Built-ins' },
+  // Built-ins
+  { src: '/images/gallery2/builtin-01.jpg', alt: 'Custom oak window seat with storage drawers and slat back', category: 'Built-ins' },
+  { src: '/images/gallery2/builtin-02.jpg', alt: 'Hallway with slatted sliding barn door and window bench', category: 'Built-ins' },
+  { src: '/images/gallery2/furniture-02.jpg', alt: 'White built-in china cabinet with lighted glass display', category: 'Built-ins' },
+  { src: '/dropbox/Large Flat004.jpg', alt: 'Oak entertainment center with fireplace surround and bookshelves', category: 'Built-ins' },
+  { src: '/dropbox/Large Flat005.jpg', alt: 'White arched built-in display shelves with mirror backing', category: 'Built-ins' },
+  { src: '/dropbox/bath3.jpg', alt: 'Custom built-in vanity with granite top in walk-in closet', category: 'Built-ins' },
 
-  // Furniture - Original
-  { src: '/images/gallery2/furniture-01.jpg', alt: 'Heirloom oak secretary desk with brass gallery', category: 'Furniture' },
-  { src: '/images/gallery2/furniture-03.jpg', alt: 'Cherry wood hutch display cabinet', category: 'Furniture' },
-  { src: '/images/gallery2/furniture-04.jpg', alt: 'Custom sideboard with granite countertop', category: 'Furniture' },
+  // Furniture
+  { src: '/images/gallery2/furniture-01.jpg', alt: 'Oak secretary desk with turned legs and brass gallery rail', category: 'Furniture' },
+  { src: '/images/gallery2/furniture-03.jpg', alt: 'Cherry china cabinet with arched glass doors', category: 'Furniture' },
+  { src: '/images/gallery2/furniture-04.jpg', alt: 'White curved sideboard with granite top and beadboard detail', category: 'Furniture' },
 
-  // Millwork - Original
-  { src: '/images/gallery2/builtin-03.jpg', alt: 'Custom barn door with hardware detail', category: 'Millwork' },
-  { src: '/images/gallery2/millwork-03.jpg', alt: 'Decorative ceiling beam with vaulted ceiling', category: 'Millwork' },
+  // Millwork
+  { src: '/images/gallery2/builtin-03.jpg', alt: 'Custom oak barn door with black metal sliding hardware', category: 'Millwork' },
+  { src: '/images/gallery2/millwork-03.jpg', alt: 'Decorative oak ceiling beam with modern ceiling fan', category: 'Millwork' },
 
   // Custom Home Bar - New (kelsey series) - Stunning walnut bar project
   { src: '/dropbox/kelsey20220052-kelsey20220056-Edit.jpg', alt: 'Custom walnut home bar with seating area', category: 'Custom Home Bar' },
@@ -36,15 +39,12 @@ const galleryImages: GalleryImage[] = [
   { src: '/dropbox/kelsey20220109.jpg', alt: 'Walnut bar cabinetry with modern tile', category: 'Custom Home Bar' },
   { src: '/dropbox/kelsey20220111.jpg', alt: 'Custom home bar with entertainment area', category: 'Custom Home Bar' },
   { src: '/dropbox/kelsey20220112.jpg', alt: 'Walnut bar with under-cabinet lighting', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220117.jpg', alt: 'Premium home bar with walnut woodwork', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220118.jpg', alt: 'Custom bar with floating shelves', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220119.jpg', alt: 'Walnut home bar full view', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220124.jpg', alt: 'Home bar detail with granite and walnut', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220125.jpg', alt: 'Custom walnut bar corner detail', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220132.jpg', alt: 'Elegant home bar with mixed materials', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220138-kelsey20220141.jpg', alt: 'Custom bar panoramic view', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220147-kelsey20220152.jpg', alt: 'Walnut bar with seating nook', category: 'Custom Home Bar' },
-  { src: '/dropbox/kelsey20220153-kelsey20220158.jpg', alt: 'Complete custom walnut home bar', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220117.jpg', alt: 'Custom walnut column base with raised panel detail', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220118.jpg', alt: 'Walnut column capital with crown molding detail', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220119.jpg', alt: 'Walnut panel wood grain close-up detail', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220138-kelsey20220141.jpg', alt: 'Basement entertainment area with walnut columns and theater seating', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220147-kelsey20220152.jpg', alt: 'Game room with pool table and custom walnut columns', category: 'Custom Home Bar' },
+  { src: '/dropbox/kelsey20220153-kelsey20220158.jpg', alt: 'Basement bar and entertainment space with walnut millwork', category: 'Custom Home Bar' },
 ];
 
 const categories = ['Built-ins', 'Furniture', 'Millwork', 'Custom Home Bar'];
