@@ -151,7 +151,7 @@ export default function KitchensBathsRemodelsGallery() {
 
           <BlurFade delay={0.6} inView>
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+15035040191"
               className="btn-primary text-lg px-10 py-5 inline-flex items-center gap-3 font-semibold rounded-none"
               whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -10px rgba(41, 97, 66, 0.4)" }}
               whileTap={{ scale: 0.98 }}

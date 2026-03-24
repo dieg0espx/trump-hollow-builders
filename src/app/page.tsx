@@ -46,7 +46,7 @@ function FloatingCTA() {
             onHoverEnd={() => setIsExpanded(false)}
           >
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+15035040191"
               className="flex items-center gap-3 bg-[#296142] text-white shadow-lg shadow-[#296142]/30 hover:bg-[#1e4a32] transition-colors"
               animate={{
                 paddingLeft: isExpanded ? 24 : 16,
@@ -578,7 +578,7 @@ function HeroSection() {
         <BlurFade delay={0.6}>
           <div className="flex flex-col sm:flex-row gap-5 justify-center">
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+15035040191"
               className="btn-primary text-lg px-10 py-5 inline-flex items-center justify-center gap-3 font-semibold rounded-none"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
@@ -1206,7 +1206,7 @@ export default function Home() {
                 Have a question that&apos;s not answered here?
               </p>
               <motion.a
-                href="tel:+1234567890"
+                href="tel:+15035040191"
                 className="inline-flex items-center gap-2 text-[#7cb894] font-semibold hover:text-white transition-colors"
                 whileHover={{ x: 4 }}
               >
@@ -1264,13 +1264,13 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="text-sm text-[#4a4a48] mb-1">Call Us</div>
-                      <div className="text-xl font-semibold text-[#1D1D1B] group-hover:text-[#296142] transition-colors">(123) 456-7890</div>
+                      <div className="text-xl font-semibold text-[#1D1D1B] group-hover:text-[#296142] transition-colors">(503) 504-0191</div>
                     </div>
                   </a>
                 </BlurFade>
 
                 <BlurFade delay={0.5} inView>
-                  <a href="mailto:info@trumphollowbuilders.com" className="flex items-center gap-4 group">
+                  <a href="mailto:dtrump58@yahoo.com" className="flex items-center gap-4 group">
                     <div className="w-14 h-14 bg-[#296142] flex items-center justify-center group-hover:bg-[#1e4a32] transition-colors">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -1278,7 +1278,7 @@ export default function Home() {
                     </div>
                     <div>
                       <div className="text-sm text-[#4a4a48] mb-1">Email Us</div>
-                      <div className="text-xl font-semibold text-[#1D1D1B] group-hover:text-[#296142] transition-colors">info@trumphollowbuilders.com</div>
+                      <div className="text-xl font-semibold text-[#1D1D1B] group-hover:text-[#296142] transition-colors">dtrump58@yahoo.com</div>
                     </div>
                   </a>
                 </BlurFade>
@@ -1336,7 +1336,7 @@ export default function Home() {
                     Schedule your free on-site consultation and take the first step toward transforming your home.
                   </p>
                   <motion.a
-                    href="tel:+1234567890"
+                    href="tel:+15035040191"
                     className="bg-[#296142] text-white px-8 py-4 inline-flex items-center gap-3 font-semibold hover:bg-[#1e4a32] transition-colors rounded-none"
                     whileHover={{ scale: 1.03 }}
                     whileTap={{ scale: 0.98 }}
@@ -1392,7 +1392,7 @@ export default function Home() {
 
           <BlurFade delay={0.6} inView>
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+15035040191"
               className="bg-white text-[#296142] text-lg px-12 py-5 inline-flex items-center gap-4 font-semibold hover:bg-gray-100 transition-colors rounded-none"
               whileHover={{ scale: 1.03, boxShadow: "0 20px 40px -10px rgba(0, 0, 0, 0.3)" }}
               whileTap={{ scale: 0.98 }}

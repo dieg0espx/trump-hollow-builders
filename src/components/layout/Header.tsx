@@ -82,7 +82,7 @@ export default function Header() {
 
             {/* CTA Button */}
             <motion.a
-              href="tel:+1234567890"
+              href="tel:+15035040191"
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.98 }}
               className="ml-4 px-6 py-3 bg-gradient-to-r from-[#296142] to-[#1e4a32] text-white font-semibold shadow-md shadow-[#296142]/20 hover:shadow-lg hover:shadow-[#296142]/30 transition-all duration-300 flex items-center gap-2 rounded-none"
@@ -165,7 +165,7 @@ export default function Header() {
                     className="pt-4"
                   >
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+15035040191"
                       className="block w-full px-6 py-3.5 bg-gradient-to-r from-[#296142] to-[#1e4a32] text-white font-semibold text-center shadow-md shadow-[#296142]/20 transition-all duration-300 active:scale-[0.98] rounded-none"
                       onClick={() => setIsMenuOpen(false)}
                     >
