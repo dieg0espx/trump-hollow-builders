@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { cn } from '@/lib/utils';
 
@@ -15,11 +15,15 @@ const navLinks = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  const hasScrolledRef = useRef(false);
 
-  // Handle scroll detection for shadow effect
   useEffect(() => {
     const handleScroll = () => {
-      setHasScrolled(window.scrollY > 10);
+      const next = window.scrollY > 10;
+      if (next !== hasScrolledRef.current) {
+        hasScrolledRef.current = next;
+        setHasScrolled(next);
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });

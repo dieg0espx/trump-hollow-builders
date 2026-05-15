@@ -1,36 +1,91 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Trump-Hollow Builders
 
-## Getting Started
+Marketing and portfolio site for Trump-Hollow Builders LLC, a custom remodel contractor serving the Greater Portland Metro Area.
 
-First, run the development server:
+Built with Next.js 16 (App Router), React 19, TypeScript, Tailwind CSS v4, and Framer Motion.
+
+## Prerequisites
+
+- Node.js 20 or newer
+- npm 10+
+
+## Local development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script | What it does |
+| --- | --- |
+| `npm run dev` | Start the dev server with hot reload |
+| `npm run build` | Production build |
+| `npm start` | Serve the production build locally |
+| `npm run lint` | Run ESLint |
+| `npx tsc --noEmit` | Type-check without emitting files |
 
-## Learn More
+## Environment variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Purpose | Default |
+| --- | --- | --- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL used by `sitemap.ts`, `robots.ts`, JSON-LD, and Open Graph tags | `https://trumphollowbuilders.com` |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Set this in the deploy target (e.g. Vercel project settings) so the production sitemap and structured data emit the correct hostname.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Project layout
 
-## Deploy on Vercel
+```
+src/
+  app/
+    layout.tsx         Root layout: metadata, JSON-LD, header/footer
+    page.tsx           Homepage
+    sitemap.ts         Generated /sitemap.xml
+    robots.ts          Generated /robots.txt
+    gallery/           Portfolio gallery routes
+  components/          Header, Footer, gallery UI, animation primitives
+  lib/
+    site.ts            SITE_URL helper
+    structured-data.ts LocalBusiness + FAQ JSON-LD definitions
+    utils.ts           cn() helper
+public/
+  dropbox/             Source photography (see Image pipeline)
+  images/              Per-section image folders
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Updating contact info
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Phone and email currently live in:
+
+- `src/app/page.tsx` (contact section, FloatingCTA)
+- `src/components/layout/Footer.tsx`
+- `src/lib/structured-data.ts` (LocalBusiness JSON-LD)
+
+Update all three when a number or email changes.
+
+## Image pipeline
+
+Source images in `public/dropbox/` are large camera-resolution JPGs. Before deploying you can resize them with the bundled script:
+
+```bash
+bash scripts/optimize-images.sh
+```
+
+The script targets `public/` relative to its own location and resizes to max 1920 px wide at quality 80. It uses macOS `sips`; on Linux/Windows install ImageMagick and adapt the script, or run a one-off Sharp/Squoosh pass.
+
+## Deploying
+
+The project is built for Vercel. Push to `main` and Vercel handles the build. The CI workflow at `.github/workflows/ci.yml` runs `lint`, `tsc --noEmit`, and `build` on every push and PR.
+
+## Adding a new gallery image
+
+1. Drop the optimized image (≤ 1920 px wide, ≤ 300 KB, WebP preferred) into the appropriate `public/images/galleryN/` directory.
+2. Add an entry to the `galleryImages` array in the matching gallery page under `src/app/gallery/*/page.tsx`.
+3. Use kebab-case filenames without spaces.
+
+## Brand
+
+Brand colors are defined in `src/app/globals.css` (`--color-*` CSS variables). Hex values are also referenced inline in components; updating brand colors requires editing both.

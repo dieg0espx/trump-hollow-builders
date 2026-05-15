@@ -98,8 +98,7 @@ export default function KitchensBathsRemodelsGallery() {
           <BlurFade delay={0.2}>
             <h1
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight"
-              style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-            >
+                          >
               Kitchens, Baths & Remodels
             </h1>
           </BlurFade>
@@ -137,8 +136,7 @@ export default function KitchensBathsRemodelsGallery() {
           <BlurFade delay={0.2} inView>
             <h2
               className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-              style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-            >
+                          >
               Ready to Transform Your Space?
             </h2>
           </BlurFade>

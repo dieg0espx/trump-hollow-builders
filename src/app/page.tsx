@@ -22,10 +22,15 @@ function ScrollProgress() {
 function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const isVisibleRef = useRef(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 500);
+      const next = window.scrollY > 500;
+      if (next !== isVisibleRef.current) {
+        isVisibleRef.current = next;
+        setIsVisible(next);
+      }
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -119,8 +124,7 @@ function FeaturedProjectCard({
         <div className="absolute bottom-0 left-0 right-0 p-8">
           <h3
             className="text-2xl md:text-3xl font-bold text-white mb-2"
-            style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-          >
+                      >
             {title}
           </h3>
           <p className="text-white/80 mb-4">{description}</p>
@@ -255,8 +259,7 @@ function TestimonialsCarousel() {
           <BlurFade delay={0.2} inView>
             <h2
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-              style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-            >
+                          >
               What Our Clients Say
             </h2>
           </BlurFade>
@@ -434,7 +437,7 @@ function GalleryCard({
           <div className="absolute bottom-0 left-0 right-0 p-8 z-20">
             <h3
               className="text-2xl sm:text-3xl font-bold text-white mb-3 tracking-tight drop-shadow-lg"
-              style={{ fontFamily: "'Times New Roman', Times, Georgia, serif", textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
+              style={{ textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}
             >
               {title}
             </h3>
@@ -562,8 +565,7 @@ function HeroSection() {
         <BlurFade delay={0.2}>
           <h1
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white mb-8 tracking-tight leading-[1.1]"
-            style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-          >
+                      >
             Structure, Durability
             <span className="block">and Development</span>
           </h1>
@@ -655,8 +657,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Craftsmanship You Can Trust
               </h2>
             </BlurFade>
@@ -741,8 +742,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Our Services
               </h2>
             </BlurFade>
@@ -821,8 +821,7 @@ export default function Home() {
                   <div className="text-[#296142] mb-6">{service.icon}</div>
                   <h3
                     className="text-2xl font-bold text-white mb-4"
-                    style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-                  >
+                                      >
                     {service.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">{service.description}</p>
@@ -857,8 +856,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Our Process
               </h2>
             </BlurFade>
@@ -896,13 +894,12 @@ export default function Home() {
             ].map((item, index) => (
               <BlurFade key={item.step} delay={0.4 + index * 0.15} inView>
                 <div className="text-center">
-                  <div className="text-6xl font-bold text-[#296142]/20 mb-4" style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}>
+                  <div className="text-6xl font-bold text-[#296142]/20 mb-4">
                     {item.step}
                   </div>
                   <h3
                     className="text-2xl font-bold text-[#1D1D1B] mb-4"
-                    style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-                  >
+                                      >
                     {item.title}
                   </h3>
                   <p className="text-[#4a4a48] leading-relaxed">{item.description}</p>
@@ -928,8 +925,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Featured Projects
               </h2>
             </BlurFade>
@@ -959,7 +955,7 @@ export default function Home() {
           <BlurFade delay={0.9} inView>
             <div className="text-center mt-12">
               <Link
-                href="#our-work"
+                href="/gallery/kitchens-baths-remodels"
                 className="inline-flex items-center gap-2 text-[#296142] font-semibold hover:gap-4 transition-all duration-300"
               >
                 View All Projects
@@ -1014,8 +1010,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#1D1D1B] mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Explore Our Portfolio
               </h2>
             </BlurFade>
@@ -1075,8 +1070,7 @@ export default function Home() {
               <BlurFade delay={0.2} inView>
                 <h2
                   className="text-4xl sm:text-5xl font-bold text-[#1D1D1B] mb-8 tracking-tight"
-                  style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-                >
+                                  >
                   Why Choose Trump-Hollow Builders
                 </h2>
               </BlurFade>
@@ -1152,8 +1146,7 @@ export default function Home() {
             <BlurFade delay={0.2} inView>
               <h2
                 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Frequently Asked Questions
               </h2>
             </BlurFade>
@@ -1242,8 +1235,7 @@ export default function Home() {
               <BlurFade delay={0.2} inView>
                 <h2
                   className="text-4xl sm:text-5xl font-bold text-[#1D1D1B] mb-8 tracking-tight"
-                  style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-                >
+                                  >
                   Get In Touch
                 </h2>
               </BlurFade>
@@ -1256,7 +1248,7 @@ export default function Home() {
 
               <div className="space-y-6">
                 <BlurFade delay={0.4} inView>
-                  <a href="tel:+1234567890" className="flex items-center gap-4 group">
+                  <a href="tel:+15035040191" className="flex items-center gap-4 group">
                     <div className="w-14 h-14 bg-[#296142] flex items-center justify-center group-hover:bg-[#1e4a32] transition-colors">
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -1328,8 +1320,7 @@ export default function Home() {
                   <div className="w-24 h-1 bg-[#296142] mx-auto mb-8" />
                   <h3
                     className="text-3xl font-bold text-white mb-6"
-                    style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-                  >
+                                      >
                     Let&apos;s Build Something Beautiful Together
                   </h3>
                   <p className="text-gray-400 mb-8 max-w-sm mx-auto">
@@ -1378,8 +1369,7 @@ export default function Home() {
           <BlurFade delay={0.2} inView>
             <h2
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 tracking-tight"
-              style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-            >
+                          >
               Ready to Start Your Project?
             </h2>
           </BlurFade>

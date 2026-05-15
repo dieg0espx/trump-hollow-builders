@@ -112,8 +112,7 @@ export default function Footer() {
               {/* Tagline */}
               <p
                 className="text-gray-300 text-lg mb-4 italic"
-                style={{ fontFamily: "'Times New Roman', Times, Georgia, serif" }}
-              >
+                              >
                 Structure, durability, and development
               </p>
 

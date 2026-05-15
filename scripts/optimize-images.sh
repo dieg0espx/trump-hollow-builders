@@ -3,7 +3,7 @@
 # Image optimization script for Trump-Hollow Builders website
 # Resizes images to web-friendly dimensions and quality
 
-IMAGES_DIR="/Users/joshuanolan/Trump Hollow Builders/website/public/images"
+IMAGES_DIR="$(cd "$(dirname "$0")/.." && pwd)/public"
 MAX_WIDTH=1920
 QUALITY=80
 
